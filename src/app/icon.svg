@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="napsql">
+  <!-- Vector replica of the application icon (napsql/build/icon.png): same
+       rounded square, same green, same N. A few hundred bytes instead of a
+       1024px PNG, and sharp at every tab size. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3ED8AE" />
+      <stop offset="1" stop-color="#22B894" />
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="232" fill="url(#g)" />
+  <path
+    d="M352 752V312l320 400V272"
+    fill="none"
+    stroke="#06231b"
+    stroke-width="92"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
