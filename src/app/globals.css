@@ -775,3 +775,59 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   .mcp-link > span, .mcp-link em { background: var(--ground); padding: 2px 6px; position: relative; }
   .mcp-steps { grid-template-columns: 1fr; }
 }
+
+/* ---------- macOS first launch ---------- */
+/* Anchored (#macos), so deliberately no content-visibility: see the note above. */
+.os-card .os-hint {
+  display: block; margin-top: 14px; padding-top: 13px;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono); font-size: 11.5px; line-height: 1.5; color: var(--faint);
+}
+.os-card .os-hint:hover { color: var(--accent); }
+
+.gk { border-top: 1px solid var(--border); }
+.gk-steps {
+  list-style: none; padding: 0; margin: 44px 0 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+}
+.gk-steps li { display: flex; gap: 14px; }
+.gk-num {
+  flex: none; width: 30px; height: 30px; border-radius: 8px;
+  display: grid; place-items: center;
+  font-family: var(--mono); font-weight: 700; font-size: 14px;
+  background: var(--accent); color: #06231b;
+}
+.gk-steps h3 { font-size: 1.02rem; margin: 3px 0 6px; letter-spacing: -0.01em; }
+.gk-steps p { color: var(--dim); font-size: 14px; margin: 0; line-height: 1.6; }
+
+.gk-kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--faint);
+}
+.gk-alt {
+  margin-top: 40px; padding: 22px 24px;
+  border: 1px solid var(--border-2); border-radius: 14px; background: var(--panel-2);
+}
+.gk-alt p { color: var(--dim); font-size: 14px; margin: 10px 0 0; }
+.gk-alt pre {
+  margin: 12px 0 0; padding: 12px 14px; overflow-x: auto;
+  background: #0C1118; border: 1px solid var(--border); border-radius: 9px;
+}
+.gk-alt code { font-family: var(--mono); font-size: 12.5px; color: var(--str); white-space: pre; }
+.gk-alt p.gk-fineprint { color: var(--faint); font-size: 13px; margin-top: 14px; }
+
+.gk-grid {
+  margin-top: 36px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
+}
+.gk-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  padding: 20px;
+}
+.gk-card h3 { font-size: 1.02rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+.gk-card p { color: var(--dim); font-size: 14px; margin: 0; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .gk-steps { grid-template-columns: 1fr; gap: 20px; }
+}

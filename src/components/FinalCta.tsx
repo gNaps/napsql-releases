@@ -10,7 +10,7 @@ export function FinalCta(): JSX.Element {
         <p>Connect to your first server in under a minute. Free while in beta: no account, no card.</p>
         <DownloadButtons />
         <p style={{ marginTop: 18, fontFamily: 'var(--mono)', fontSize: 12.5, color: 'var(--faint)' }}>
-          v{site.version} beta · ~{site.windowsSizeMb} MB
+          v{site.version} beta · Windows ~{site.windowsSizeMb} MB · macOS ~{site.macSizeMb} MB
         </p>
       </div>
     </section>

@@ -7,6 +7,7 @@ import { Mcp } from '@/components/Mcp'
 import { Spotlights } from '@/components/Spotlights'
 import { Changelog } from '@/components/Changelog'
 import { Platforms } from '@/components/Platforms'
+import { MacFirstLaunch } from '@/components/MacFirstLaunch'
 import { FinalCta } from '@/components/FinalCta'
 import { Footer } from '@/components/Footer'
 
@@ -27,6 +28,7 @@ export default function Page(): JSX.Element {
         <Spotlights />
         <Changelog />
         <Platforms />
+        <MacFirstLaunch />
         <FinalCta />
       </main>
       <Footer />

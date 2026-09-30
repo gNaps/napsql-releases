@@ -24,7 +24,7 @@ export function Platforms(): JSX.Element {
           <div className={`os-card${site.macDownloadUrl ? '' : ' os-soon'}`}>
             <AppleIcon />
             <h3>macOS</h3>
-            <div className="meta">Apple Silicon &amp; Intel · macOS 12+</div>
+            <div className="meta">Apple Silicon · macOS 12+ · ~{site.macSizeMb} MB</div>
             {site.macDownloadUrl ? (
               <a className="dl" href={site.macDownloadUrl} download rel="noopener">
                 Download .dmg →
@@ -32,6 +32,9 @@ export function Platforms(): JSX.Element {
             ) : (
               <span className="dl-soon">Coming soon</span>
             )}
+            <a className="os-hint" href="#macos">
+              First launch needs one extra click →
+            </a>
           </div>
         </div>
         <p style={{ marginTop: 34, color: 'var(--faint)', fontFamily: 'var(--mono)', fontSize: 13 }}>
