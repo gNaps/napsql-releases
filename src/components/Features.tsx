@@ -60,7 +60,7 @@ const CARDS: Array<{ color: string; tag: string; title: string; text: string }> 
     color: 'var(--purple)',
     tag: 'Data',
     title: 'Editable results',
-    text: 'Edit cells right in the grid and commit changes, generate GUIDs in one click, open long values in a viewer, and export any result set to CSV.'
+    text: 'Edit cells right in the grid and commit changes, generate GUIDs in one click, open long values in a viewer, and export any result set to CSV (Excel-ready) or JSON.'
   }
 ]
 

@@ -687,3 +687,91 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
    Both columns therefore need both marks. */
 .cmp .ssms .yes { color: var(--green); margin-right: 7px; }
 .cmp .nap .no { color: var(--faint); margin-right: 7px; }
+
+/* ---------- MCP ---------- */
+.mcp { border-top: 1px solid var(--border); }
+.mcp-kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--faint);
+}
+.mcp-flow {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 104px 1fr 150px 1.15fr 64px 1fr;
+  align-items: stretch;
+  gap: 0;
+}
+.mcp-node {
+  border: 1px solid var(--border-2); border-radius: 14px;
+  background: var(--panel-2);
+  padding: 18px 16px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.mcp-node strong { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--text); }
+.mcp-node > span:last-child { color: var(--dim); font-size: 13px; line-height: 1.5; }
+.mcp-node.mcp-safe {
+  border-color: rgba(52,209,166,0.45);
+  background: rgba(52,209,166,0.07);
+  box-shadow: 0 0 0 1px rgba(52,209,166,0.12), 0 16px 40px rgba(52,209,166,0.08);
+}
+.mcp-node.mcp-safe .mcp-kicker, .mcp-lock { color: var(--accent); }
+.mcp-link {
+  position: relative;
+  min-width: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  padding: 0 8px;
+  font-family: var(--mono); font-size: 10.5px; color: var(--faint); text-align: center;
+}
+.mcp-link::before {
+  content: ""; width: 100%; height: 1px;
+  background: var(--border-2);
+  order: 1;
+}
+.mcp-link > span { order: 0; }
+.mcp-link em { order: 2; font-style: normal; }
+.mcp-trust::before { background: none; border-top: 2px dashed var(--amber); height: 0; }
+.mcp-trust em { color: var(--amber); }
+
+.mcp-steps {
+  list-style: none; padding: 0; margin: 48px 0 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.mcp-steps li { display: flex; gap: 14px; }
+.mcp-num {
+  flex: none; width: 30px; height: 30px; border-radius: 8px;
+  display: grid; place-items: center;
+  font-family: var(--mono); font-weight: 700; font-size: 14px;
+  background: var(--accent); color: #06231b;
+}
+.mcp-steps h3, .mcp-card h3 { font-size: 1.02rem; margin: 3px 0 6px; letter-spacing: -0.01em; }
+.mcp-steps p, .mcp-card p { color: var(--dim); font-size: 14px; margin: 0; line-height: 1.6; }
+
+.mcp-grid {
+  margin-top: 40px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
+}
+.mcp-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  padding: 20px;
+}
+.mcp-card h3::before { content: "✓ "; color: var(--accent); font-family: var(--mono); }
+
+.mcp-tools { margin-top: 36px; }
+.mcp-tools ul { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.mcp-tools li {
+  font-family: var(--mono); font-size: 12.5px; color: var(--fn);
+  border: 1px solid var(--border-2); border-radius: 7px; padding: 5px 10px;
+  background: var(--panel-2);
+}
+.mcp-tools li.gated { color: var(--amber); border-color: rgba(245,180,84,0.4); }
+.mcp-tools li.gated span { color: var(--faint); }
+
+@media (max-width: 900px) {
+  .mcp-flow { grid-template-columns: 1fr; }
+  .mcp-link { min-height: 58px; flex-direction: row; flex-wrap: wrap; gap: 4px 10px; padding: 8px 0; }
+  .mcp-link::before { width: 1px; height: 100%; position: absolute; left: 50%; top: 0; }
+  .mcp-trust::before { width: 0; border-top: none; border-left: 2px dashed var(--amber); }
+  .mcp-link > span, .mcp-link em { background: var(--ground); padding: 2px 6px; position: relative; }
+  .mcp-steps { grid-template-columns: 1fr; }
+}

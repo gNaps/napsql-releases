@@ -14,6 +14,7 @@ export function Nav(): JSX.Element {
         <div className="nav-links">
           <a href="#why">Why switch</a>
           <a href="#features">Features</a>
+          <a href="#mcp">MCP</a>
           <a href="#plans">Plans &amp; ops</a>
           <a href="#changelog">What’s new</a>
           <a href="#download">Download</a>

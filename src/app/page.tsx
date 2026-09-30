@@ -3,6 +3,7 @@ import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
 import { Compare } from '@/components/Compare'
 import { Features } from '@/components/Features'
+import { Mcp } from '@/components/Mcp'
 import { Spotlights } from '@/components/Spotlights'
 import { Changelog } from '@/components/Changelog'
 import { Platforms } from '@/components/Platforms'
@@ -22,6 +23,7 @@ export default function Page(): JSX.Element {
         <Hero />
         <Compare />
         <Features />
+        <Mcp />
         <Spotlights />
         <Changelog />
         <Platforms />
