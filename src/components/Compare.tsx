@@ -6,10 +6,15 @@ import type { JSX } from 'react'
  */
 const ROWS: Array<{ feat: string; ssms: string; nap: string; ssmsMark?: string; napMark?: string }> = [
   { feat: 'Platforms', ssms: 'Windows only', nap: 'macOS & Windows' },
-  { feat: 'Interface', ssms: 'Legacy shell, no dark mode', nap: 'Native, modern, dark mode' },
+  {
+    feat: 'Interface',
+    ssms: 'Visual Studio shell, dark theme since SSMS 21',
+    nap: 'Native, modern, dark mode',
+    ssmsMark: '~'
+  },
   {
     feat: 'AI assistance',
-    ssms: 'GitHub Copilot, no choice of model',
+    ssms: 'GitHub Copilot, with the models your Copilot plan includes',
     nap: 'Claude, GPT or a local model, with your own key',
     ssmsMark: '~'
   },
@@ -50,7 +55,8 @@ export function Compare(): JSX.Element {
           <h2 id="why-title">The everyday work of SSMS, without the weight and without Windows.</h2>
           <p>
             SSMS is powerful and battle-tested, and for deep administration it still wins. It is also Windows-only,
-            heavy, and frozen in a two-decade-old shell. napsql keeps the daily workflow and drops the friction.
+            a gigabyte to install, and tied to the model list of a Copilot plan. napsql keeps the daily workflow and
+            drops the friction.
           </p>
         </div>
 

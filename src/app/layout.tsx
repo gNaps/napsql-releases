@@ -32,12 +32,16 @@ export const metadata: Metadata = {
     description: 'The cross-platform alternative to SSMS, on macOS and Windows.',
     ...(site.twitterHandle ? { site: site.twitterHandle, creator: site.twitterHandle } : {})
   },
-  // The favicon is a vector replica of the application icon, so the browser tab
-  // matches the installed app without shipping a 1024px PNG.
+  // The favicon is the application icon: the app's own multi-size .ico for
+  // browsers and crawlers that ignore SVG (Safari, Google results), plus a
+  // vector replica that stays sharp at every tab size elsewhere.
   // It is declared explicitly because an `icons` block suppresses the
   // file-convention link Next would otherwise inject.
   icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64 128x128 256x256' },
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
     apple: [{ url: '/app-icon.png', sizes: '1024x1024', type: 'image/png' }]
   }
 }

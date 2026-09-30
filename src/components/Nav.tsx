@@ -7,7 +7,9 @@ export function Nav(): JSX.Element {
           <span className="mark" aria-hidden="true">
             N
           </span>
-          nap<b>sql</b>
+          <span>
+            nap<b>sql</b>
+          </span>
         </a>
         <div className="nav-links">
           <a href="#why">Why switch</a>
