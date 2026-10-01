@@ -10,7 +10,7 @@
  * form is deliberately not used — it resolves the release *tag*, not the
  * asset, so a versioned filename 404s the moment a newer release exists.
  */
-const version = '0.4.1'
+const version = '0.4.2'
 const releaseAsset = (file: string): string =>
   `https://github.com/gNaps/napsql-releases/releases/download/v${version}/${file}`
 

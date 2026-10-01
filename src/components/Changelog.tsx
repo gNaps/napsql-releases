@@ -22,6 +22,23 @@ const KIND_LABEL: Record<Kind, string> = { new: 'New', better: 'Better', fixed: 
 /** Newest first. The top one is expanded; the rest live in a <details>. */
 const RELEASES: Release[] = [
   {
+    version: '0.4.2',
+    date: '1 October 2026',
+    headline: 'napsql speaks English, and the assistant and MCP server got a round of hardening.',
+    entries: [
+      {
+        kind: 'new',
+        title: 'English interface',
+        text: 'napsql now ships in English and Italian. English is the default, a fresh install opens in the language of your desktop, and you can switch at any time from Settings → Language, independently of the Locale setting that governs number and date formatting. The assistant answers in the language you picked.'
+      },
+      {
+        kind: 'better',
+        title: 'Security and stability improvements',
+        text: 'A round of improvements to the read-only guarantees of the AI assistant and the MCP server, plus a few fixes to formatting that ignored the Locale setting. Updating is recommended.'
+      }
+    ]
+  },
+  {
     version: '0.4.1',
     date: '30 September 2026',
     headline: 'Results that open cleanly in Excel, and a JSON export next to the CSV one.',
