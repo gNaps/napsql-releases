@@ -5,14 +5,12 @@
  */
 
 /**
- * Bump this at every release: the download URLs below are derived from it, so
- * the version lives in exactly one place. GitHub's `latest/download/<name>`
- * form is deliberately not used — it resolves the release *tag*, not the
- * asset, so a versioned filename 404s the moment a newer release exists.
+ * At every release, bump `version` AND both download URLs below by hand. They
+ * are kept as explicit strings on purpose. Pin them to the release tag, never
+ * to `latest/download/<name>`: that form resolves the *tag*, not the asset, so
+ * a versioned filename 404s the moment a newer release exists.
  */
 const version = '0.4.2'
-const releaseAsset = (file: string): string =>
-  `https://github.com/gNaps/napsql-releases/releases/download/v${version}/${file}`
 
 export const site = {
   name: 'napsql',
@@ -24,12 +22,14 @@ export const site = {
   windowsSizeMb: 87,
   /** Approximate .dmg size (Apple Silicon build). */
   macSizeMb: 108,
-  /** Windows installer (NSIS, x64), pinned to the tag for this version. */
+  /** Windows installer (NSIS, x64). */
   windowsDownloadUrl:
-    process.env.NEXT_PUBLIC_WIN_DOWNLOAD_URL ?? releaseAsset(`Napsql-${version}-setup.exe`),
+    process.env.NEXT_PUBLIC_WIN_DOWNLOAD_URL ??
+    'https://github.com/gNaps/napsql-releases/releases/download/v0.4.2/Napsql-0.4.2-setup.exe',
   /** macOS .dmg (Apple Silicon). Set to null to show "coming soon" instead. */
   macDownloadUrl:
-    process.env.NEXT_PUBLIC_MAC_DOWNLOAD_URL ?? releaseAsset(`Napsql-${version}-arm64.dmg`),
+    process.env.NEXT_PUBLIC_MAC_DOWNLOAD_URL ??
+    'https://github.com/gNaps/napsql-releases/releases/download/v0.4.2/Napsql-0.4.2-arm64.dmg',
   twitterHandle: process.env.NEXT_PUBLIC_TWITTER ?? null
 } as const
 
