@@ -22,6 +22,43 @@ const KIND_LABEL: Record<Kind, string> = { new: 'New', better: 'Better', fixed: 
 /** Newest first. The top one is expanded; the rest live in a <details>. */
 const RELEASES: Release[] = [
   {
+    version: '0.4.3',
+    date: '19 October 2026',
+    headline: 'Bring data in from CSV, see keys and indexes at a glance, and browse what your linked servers hold.',
+    entries: [
+      {
+        kind: 'new',
+        title: 'Import CSV into a table',
+        text: 'Right click a table or a database. Delimiter, encoding, header and number and date formats are detected for you; map the columns onto an existing table, or create a new one with types inferred from the file. A preview marks every value that would not convert, and the whole file goes in one transaction: it all lands, or nothing does.'
+      },
+      {
+        kind: 'new',
+        title: 'Keys, constraints and indexes',
+        text: 'Every table now lists its primary, unique and foreign keys, its check and default constraints and its indexes, tagged clustered, unique, filtered or columnstore. Script them, or rebuild, reorganize, disable and enable an index, always as a script you review before running.'
+      },
+      {
+        kind: 'new',
+        title: 'Browse linked servers',
+        text: 'Expand a linked server to see its catalogs, tables, views and columns, read through the linked server itself. Double click a remote table to query it by its four-part name.'
+      },
+      {
+        kind: 'new',
+        title: 'JSON next to the grid',
+        text: 'Switch any result set to JSON to read or copy it. In the table editor the JSON is editable: change values, add or remove rows, apply, and save as usual.'
+      },
+      {
+        kind: 'new',
+        title: 'Update notifications',
+        text: 'napsql tells you when a new version is out, and downloads it only when you say so. From this release on, updating is one click.'
+      },
+      {
+        kind: 'better',
+        title: 'Fully translated, and tabs you can reorder',
+        text: 'Every menu, tooltip and message now follows the interface language, English or Italian. Editor tabs can be dragged into the order you like.'
+      }
+    ]
+  },
+  {
     version: '0.4.2',
     date: '1 October 2026',
     headline: 'napsql speaks English, and the assistant and MCP server got a round of hardening.',
