@@ -22,6 +22,53 @@ const KIND_LABEL: Record<Kind, string> = { new: 'New', better: 'Better', fixed: 
 /** Newest first. The top one is expanded; the rest live in a <details>. */
 const RELEASES: Release[] = [
   {
+    version: '0.5.0',
+    date: '18 November 2026',
+    headline: 'Let Claude change your data, with the safeguards you would want, and walk your server like a folder tree.',
+    entries: [
+      {
+        kind: 'new',
+        title: 'Three levels of MCP writes',
+        text: 'Each connection is read only, data (INSERT, UPDATE, DELETE, MERGE and nothing else) or full. The level is checked on the whole script before you are asked anything: a DROP on a data-only connection goes straight back to the client with the reason.'
+      },
+      {
+        kind: 'new',
+        title: 'See the impact before you approve',
+        text: 'Every write is first run in a transaction that is rolled back, so the confirmation tells you how many rows it touches, statement by statement. Above a row threshold you have to tick an explicit acknowledgement.'
+      },
+      {
+        kind: 'new',
+        title: 'All or nothing',
+        text: 'An approved script runs as a single transaction across all its GO batches. One failing statement rolls back everything, and the client is told exactly how many rows each statement changed.'
+      },
+      {
+        kind: 'new',
+        title: 'Stricter where it matters',
+        text: 'On dev and local connections you can allow writes for a few minutes. Staging asks every time. Production asks every time and only unlocks once you type the connection name.'
+      },
+      {
+        kind: 'new',
+        title: 'Browse a server as a grid',
+        text: 'Open a tab that walks the server like folders: databases with owner, size and schemas, tables with rows, space and dates, then columns with keys and defaults. Breadcrumb, back, filter, and the same right-click menu as the tree.'
+      },
+      {
+        kind: 'new',
+        title: 'Connection strings, in and out',
+        text: 'Paste an ADO.NET, ODBC, JDBC or mssql:// string to fill a new connection, and copy any saved connection back as a string, with or without the password.'
+      },
+      {
+        kind: 'better',
+        title: 'Smaller things that add up',
+        text: 'Click a row number to select the whole row. The SQL filter proposes columns and autocompletes them. Settings have a section menu on the left.'
+      },
+      {
+        kind: 'fixed',
+        title: 'Claude Desktop from the Microsoft Store',
+        text: 'One-click setup wrote to a config file that the Store version of Claude Desktop never reads. napsql now finds every installation and configures them all.'
+      }
+    ]
+  },
+  {
     version: '0.4.3',
     date: '19 October 2026',
     headline: 'Bring data in from CSV, see keys and indexes at a glance, and browse what your linked servers hold.',

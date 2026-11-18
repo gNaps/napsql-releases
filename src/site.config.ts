@@ -10,7 +10,7 @@
  * to `latest/download/<name>`: that form resolves the *tag*, not the asset, so
  * a versioned filename 404s the moment a newer release exists.
  */
-const version = '0.4.2'
+const version = '0.5.0'
 
 export const site = {
   name: 'napsql',
@@ -25,7 +25,7 @@ export const site = {
   /** Windows installer (NSIS, x64). */
   windowsDownloadUrl:
     process.env.NEXT_PUBLIC_WIN_DOWNLOAD_URL ??
-    'https://github.com/gNaps/napsql-releases/releases/download/v0.4.2/Napsql-0.4.2-setup.exe',
+    'https://github.com/gNaps/napsql-releases/releases/download/v0.5.0/Napsql-0.5.0-setup.exe',
   /** macOS .dmg (Apple Silicon). Set to null to show "coming soon" instead. */
   macDownloadUrl:
     process.env.NEXT_PUBLIC_MAC_DOWNLOAD_URL ??

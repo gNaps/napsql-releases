@@ -38,11 +38,11 @@ const GUARANTEES: Array<{ title: string; text: string }> = [
   },
   {
     title: 'Read-only by default',
-    text: 'An exposed connection can only be read. Writes are a second, per-connection grant you have to give on purpose.'
+    text: 'An exposed connection can only be read. Writes are granted per connection, at a level you choose: data changes only, or full.'
   },
   {
     title: 'Every write, confirmed',
-    text: 'Each write stops in napsql with the exact SQL in front of you, and runs only when you approve it.'
+    text: 'Each write stops in napsql with the exact SQL and the rows it would change, measured by a dry run. Once approved it runs in one transaction: all of it, or nothing.'
   },
   {
     title: 'Bounded queries',
@@ -98,7 +98,7 @@ export function Mcp(): JSX.Element {
               </span>{' '}
               holds the login
             </strong>
-            <span>applies exposure, read-only and confirmations</span>
+            <span>applies exposure, write levels and confirmations</span>
           </div>
           <div className="mcp-link">
             <span>TDS</span>
@@ -139,7 +139,7 @@ export function Mcp(): JSX.Element {
             {TOOLS.map((t) => (
               <li key={t} className={t === 'run_write' ? 'gated' : undefined}>
                 {t}
-                {t === 'run_write' && <span> · needs your grant + confirmation</span>}
+                {t === 'run_write' && <span> · needs your grant, preview + confirmation</span>}
               </li>
             ))}
           </ul>

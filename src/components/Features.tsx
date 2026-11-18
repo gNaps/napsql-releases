@@ -48,7 +48,7 @@ const CARDS: Array<{ color: string; tag: string; title: string; text: string }> 
     color: 'var(--blue)',
     tag: 'MCP',
     title: 'Reachable from your AI client',
-    text: 'Expose a connection to Claude Desktop or Claude Code and ask questions where you already work. Read-only unless you say otherwise, every write confirmed in napsql, and your password never leaves the app.'
+    text: 'Expose a connection to Claude Desktop or Claude Code and ask questions where you already work. Read-only unless you say otherwise, every write previewed and confirmed in napsql, and your password never leaves the app.'
   },
   {
     color: 'var(--green)',
